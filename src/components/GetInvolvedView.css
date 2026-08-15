@@ -1,0 +1,35 @@
+.get-involved-view {
+  padding-bottom: 24px;
+}
+
+.info-section {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-section p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.info-section.highlight {
+  border-color: var(--accent-primary);
+  background: rgba(249, 115, 22, 0.05);
+}
+
+.full-width {
+  width: 100%;
+}

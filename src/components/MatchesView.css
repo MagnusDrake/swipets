@@ -1,0 +1,127 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+
+.forms-section {
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.forms-section p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.form-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.link-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.match-card {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.match-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.match-info {
+  padding: 12px;
+}
+
+.match-info h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.match-info p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.match-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.match-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.match-btn.primary-btn {
+  flex: 1;
+  background: var(--accent-primary);
+  color: #fff;
+  gap: 6px;
+}
+
+.match-btn.primary-btn:hover {
+  background: #ea580c;
+}
+
+.match-btn.remove-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--swipe-pass);
+}
+
+.match-btn.remove-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}

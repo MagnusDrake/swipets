@@ -1,0 +1,35 @@
+.about-view {
+  padding-bottom: 24px;
+}
+
+.info-card {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+  color: var(--accent-secondary);
+}
+
+.info-card p {
+  margin-bottom: 12px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.info-card.highlight {
+  border-color: var(--accent-primary);
+  background: rgba(249, 115, 22, 0.05);
+}
+
+.contact-info {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.contact-info p {
+  margin-bottom: 4px;
+}
