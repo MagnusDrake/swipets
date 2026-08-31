@@ -84,7 +84,7 @@ export const mockPets = [
     breed: 'Ferret Duo',
     age: '1 year',
     description: 'This bonded duo are the funniest little acrobats you will ever meet! Constant play and laughs.',
-    image: 'https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/ferret.png',
     tags: ['playful', 'pack attitude', 'energetic'],
     gender: 'Male',
   },
