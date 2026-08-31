@@ -11,6 +11,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .swipe-instructions {
@@ -25,13 +27,148 @@
   color: var(--accent-secondary);
 }
 
-.filter-btn {
+.header-controls {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+}
+
+.algorithm-badge-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.algorithm-badge-btn:hover {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fff;
+}
+
+.algorithm-badge-btn.active {
+  background: rgba(251, 191, 36, 0.1);
+  color: var(--accent-secondary);
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
   color: var(--text-color);
   font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+}
+
+/* Algorithm Insights Drawer */
+.algorithm-insights-panel {
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.algo-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.algo-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.algo-title h3 {
+  font-size: 1.05rem;
+  color: #fff;
+  margin: 0;
+}
+
+.icon-btn-small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  transition: all 0.2s;
+}
+
+.icon-btn-small:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.algo-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.algo-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.algo-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-num {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.algo-insights-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.insight-heading {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.algo-insight-pill {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--accent-primary);
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
 .filters-container {
@@ -70,6 +207,7 @@
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  min-height: 480px;
 }
 
 .swipe-card {
@@ -90,13 +228,65 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Algorithm Match Pill on the Card */
+.algo-match-pill {
+  align-self: flex-start;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.algo-match-pill.high-match {
+  background: rgba(249, 115, 22, 0.85);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: pulse-glow 2s infinite;
+}
+
+.algo-match-pill.wildcard {
+  background: rgba(168, 85, 247, 0.85);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.algo-match-pill.underdog {
+  background: rgba(14, 165, 233, 0.85);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.algo-match-pill.match, .algo-match-pill.new, .algo-match-pill.foryou {
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  border: 1px solid var(--glass-border);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.9);
+  }
 }
 
 .card-info {
   margin: 16px;
   padding: 20px;
-  background: rgba(15, 23, 42, 0.7); /* Darker glass for readability */
+  background: rgba(15, 23, 42, 0.75); /* Darker glass for crisp contrast */
 }
 
 .card-header {
